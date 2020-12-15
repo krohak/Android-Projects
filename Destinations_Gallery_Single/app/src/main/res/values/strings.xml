@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Destinations</string>
+    <string name="destination1">Yau Tong</string>
+    <string name="destination2">Po Toi Island</string>
+    <string name="destination3">Lamma Island</string>
+    <string name="destination4">Lantau Island</string>
+    <string name="destination5">Discovery Bay</string>
+    <string name="destination6">Cheung Chau Island</string>
+    <string name="destination7">Peng Chau Island</string>
+</resources>
