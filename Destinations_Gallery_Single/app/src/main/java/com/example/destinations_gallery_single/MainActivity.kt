@@ -6,11 +6,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.destinations_gallery_single.adapter.ItemAdapter
 import com.example.destinations_gallery_single.data.Datasource
+import com.google.android.material.appbar.MaterialToolbar
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val mActionBarToolbar: MaterialToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(mActionBarToolbar);
+        supportActionBar?.title = this.resources.getString(R.string.app_name);
 
         // Initialize data.
         val myDataset = Datasource().loadDestinations()

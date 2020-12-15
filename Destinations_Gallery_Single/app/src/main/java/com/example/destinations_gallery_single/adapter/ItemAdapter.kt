@@ -9,13 +9,18 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.destinations_gallery_single.R
 import com.example.destinations_gallery_single.model.Destination
+import org.w3c.dom.Text
+import java.text.NumberFormat
 
 class ItemAdapter(private val context: Context, private val dataset: List<Destination>) :
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView = view.findViewById(R.id.item_title)
+        val titleTextView: TextView = view.findViewById(R.id.item_title)
         val imageView: ImageView = view.findViewById(R.id.item_image)
+        val numberView: TextView = view.findViewById(R.id.item_number)
+        val priceTextView: TextView = view.findViewById(R.id.item_price)
+        val datesTextView: TextView = view.findViewById(R.id.item_dates)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -28,8 +33,12 @@ class ItemAdapter(private val context: Context, private val dataset: List<Destin
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
-        holder.textView.text = context.resources.getString(item.stringResourceId)
+        holder.titleTextView.text = context.resources.getString(item.stringResourceId)
         holder.imageView.setImageResource(item.imageResourceId)
+        holder.numberView.text = position.toString()
+        val formattedPrice: Int = context.resources.getInteger(item.priceIntResourceId)
+        holder.priceTextView.text = NumberFormat.getCurrencyInstance().format(formattedPrice)
+        holder.datesTextView.text = context.resources.getString(item.datesStringResourceId)
     }
 
     override fun getItemCount() = dataset.size
