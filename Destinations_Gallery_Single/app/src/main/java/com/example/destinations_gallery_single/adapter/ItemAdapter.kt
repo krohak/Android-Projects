@@ -14,15 +14,17 @@ class ItemAdapter(private val context: Context, private val dataset: List<Destin
     class ItemViewHolder(private val listItemBinding: ListItemBinding) : RecyclerView.ViewHolder(listItemBinding.root) {
 
         fun bind(destinationItem: Destination, context: Context, position: Int) {
-            listItemBinding.itemTitle.text = context.resources.getString(destinationItem.stringResourceId)
-            listItemBinding.itemImage.setImageResource(destinationItem.imageResourceId)
-            listItemBinding.itemNumber.text = position.toString()
+
             val formattedPrice: Int = context.resources.getInteger(destinationItem.priceIntResourceId)
-            listItemBinding.itemPrice.text = NumberFormat.getCurrencyInstance().format(formattedPrice)
-            listItemBinding.itemDates.text = context.resources.getString(destinationItem.datesStringResourceId)
 
+            listItemBinding.apply {
+                itemTitle.text = context.resources.getString(destinationItem.stringResourceId)
+                itemImage.setImageResource(destinationItem.imageResourceId)
+                itemNumber.text = position.toString()
+                itemPrice.text = NumberFormat.getCurrencyInstance().format(formattedPrice)
+                itemDates.text = context.resources.getString(destinationItem.datesStringResourceId)
+            }
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
