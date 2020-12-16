@@ -8,6 +8,7 @@ import com.example.destinations_gallery_single.data.Datasource
 import com.example.destinations_gallery_single.databinding.ActivityMainBinding
 import com.google.android.material.appbar.MaterialToolbar
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -25,7 +26,6 @@ class MainActivity : AppCompatActivity() {
         val myDataset = Datasource().loadDestinations()
 
         val recyclerView: RecyclerView = binding.recyclerView;
-
         recyclerView.adapter = ItemAdapter(this, myDataset)
 
         // Use this setting to improve performance if you know that changes
