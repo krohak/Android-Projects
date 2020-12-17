@@ -54,7 +54,7 @@
                 android:paddingHorizontal="12dp"
                 android:paddingTop="3dp"
                 android:paddingBottom="5dp"
-                android:text="@{Destination.priceIntResourceId}"
+                android:text="@string/test"
                 tools:text="@string/test" />
 
             <TextView
