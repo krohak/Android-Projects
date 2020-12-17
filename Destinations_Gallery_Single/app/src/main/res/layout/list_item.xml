@@ -1,72 +1,87 @@
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginVertical="10dp"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
-    android:clickable="true"
-    android:focusable="true"
-    android:foreground="?android:attr/selectableItemBackground"
-    app:cardElevation="4dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <data>
+
+        <variable
+            name="Destination"
+            type="com.example.destinations_gallery_single.model.Destination" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="10dp">
+        android:layout_marginVertical="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardElevation="4dp">
 
-        <ImageView
-            android:id="@+id/item_image"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="194dp"
-            android:importantForAccessibility="no"
-            android:scaleType="centerCrop" />
-
-        <TextView
-            android:id="@+id/item_title"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="2dp"
-            android:text="@string/test"
-            android:textAppearance="?attr/textAppearanceSubtitle2" />
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
-        <TextView
-            android:id="@+id/item_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="12dp"
-            android:paddingTop="3dp"
-            android:paddingBottom="5dp"
-            android:text="@string/test"
-            android:textAppearance="?attr/textAppearanceBody2" />
+            <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="match_parent"
+                android:layout_height="194dp"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                app:imageResource="@{Destination.imageResourceId}"
+                tools:src="@drawable/image4" />
 
-        <TextView
-            android:id="@+id/item_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="12dp"
-            android:paddingTop="3dp"
-            android:paddingBottom="5dp"
-            android:text="@string/test"
-            android:textAppearance="?attr/textAppearanceBody2" />
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="2dp"
+                android:text="@{Destination.stringResourceId}"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                tools:text="@string/test" />
 
-        <TextView
-            android:id="@+id/item_dates"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="12dp"
-            android:paddingTop="3dp"
-            android:paddingBottom="5dp"
-            android:text="@string/test"
-            android:textAppearance="?attr/textAppearanceBody2" />
+            <TextView
+                android:id="@+id/item_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="5dp"
+                android:text="@{Destination.priceIntResourceId}"
+                tools:text="@string/test" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="5dp"
+                android:text="@string/test"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="@string/test" />
+
+            <TextView
+                android:id="@+id/item_dates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="5dp"
+                android:text="@{Destination.datesStringResourceId}"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="@string/test" />
+
+        </LinearLayout>
 
 
-</com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.card.MaterialCardView>
 
-
+</layout>
