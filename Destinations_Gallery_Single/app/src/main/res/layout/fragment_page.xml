@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PageFragment">
+
+    <data>
+
+<!--        <variable-->
+<!--            name="page"-->
+<!--            type="com.example.destinations_gallery_single.PageFragment" />-->
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/CoverPhotosFragment">
+
+            <fragment
+                android:id="@+id/CoverPhotosFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_cover_photos" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginLeft"
+                android:layout_marginLeft="@dimen/marginLeft"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/marginRight"
+                android:layout_marginRight="@dimen/marginRight"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                android:textStyle="bold"
+                tools:text="@string/page_heading" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginLeft"
+                android:layout_marginLeft="@dimen/marginLeft"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/marginRight"
+                android:layout_marginRight="@dimen/marginRight"
+                android:text="@string/demo_info"
+                android:textAppearance="?attr/textAppearanceBody2" />
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_gallery_view" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</layout>
