@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
     app:startDestination="@id/galleryViewFragment">
 
     <fragment
         android:id="@+id/galleryViewFragment"
         android:name="com.example.destinations_gallery_single.GalleryViewFragment"
-        android:label="GalleryViewFragment" />
+        android:label="GalleryViewFragment"
+        tools:layout="@layout/fragment_gallery_view"/>
 </navigation>
