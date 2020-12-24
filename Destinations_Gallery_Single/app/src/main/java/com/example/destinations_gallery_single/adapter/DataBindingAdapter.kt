@@ -6,8 +6,8 @@ import androidx.databinding.BindingAdapter
 import java.text.NumberFormat
 
 @BindingAdapter("imageResource")
-fun setImageResource(imageView: ImageView, imageResourceId: Int) {
-    imageView.setImageResource(imageResourceId)
+fun setImageResource(imageView: ImageView, imageName: String) {
+//    imageView.setImageResource(imageName)
 }
 
 @BindingAdapter("formattedPrice")

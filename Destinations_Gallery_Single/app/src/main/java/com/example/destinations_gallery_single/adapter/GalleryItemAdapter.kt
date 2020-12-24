@@ -6,9 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.destinations_gallery_single.databinding.FragmentGalleryItemBinding
 import com.example.destinations_gallery_single.model.Destination
-import java.text.NumberFormat
 
-class GalleryItemAdapter(private val context: Context, private val dataset: List<Destination>) :
+class GalleryItemAdapter(private val context: Context, private val dataset: List<Destination>?) :
     RecyclerView.Adapter<GalleryItemAdapter.ItemViewHolder>() {
 
     class ItemViewHolder(private val galleryItemBinding: FragmentGalleryItemBinding) :
@@ -18,12 +17,12 @@ class GalleryItemAdapter(private val context: Context, private val dataset: List
 
             galleryItemBinding.destination = destinationItem
 
-            val formattedPrice: Int =
-                context.resources.getInteger(destinationItem.priceIntResourceId)
-
             galleryItemBinding.apply {
                 itemNumber.text = position.toString()
-                itemPrice.text = NumberFormat.getCurrencyInstance().format(formattedPrice)
+                val resourceId = context.resources.getIdentifier(
+                    destinationItem.imageName, "drawable", context.packageName
+                );
+                galleryItemBinding.itemImage.setImageResource(resourceId)
             }
         }
     }
@@ -35,9 +34,11 @@ class GalleryItemAdapter(private val context: Context, private val dataset: List
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val destinationItem = dataset[position]
-        holder.bind(destinationItem, context, position)
+        val destinationItem = dataset?.get(position)
+        if (destinationItem != null) {
+            holder.bind(destinationItem, context, position)
+        }
     }
 
-    override fun getItemCount() = dataset.size
+    override fun getItemCount(): Int = dataset?.size ?: 0
 }

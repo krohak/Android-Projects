@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Yau Tong",
+    "imageName": "image1",
+    "price": 1128,
+    "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM"
+  },
+  {
+    "name": "Po Toi Island",
+    "imageName": "image2",
+    "price": 1263,
+    "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM"
+  },
+  {
+    "name": "Lamma Island",
+    "imageName": "image3",
+    "price": 1735,
+    "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM"
+  },
+  {
+    "name": "Lantau Island",
+    "imageName": "image4",
+    "price": 1263,
+    "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM"
+  },
+  {
+    "name": "Discovery Bay",
+    "imageName": "image5",
+    "price": 1735,
+    "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM"
+  },
+  {
+    "name": "Cheung Chau Island",
+    "imageName": "image6",
+    "price": 2412,
+    "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM"
+  },
+  {
+    "name": "Peng Chau Island",
+    "imageName": "image7",
+    "price": 1625,
+    "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM"
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+

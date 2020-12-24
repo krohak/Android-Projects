@@ -33,7 +33,7 @@
                 android:layout_height="194dp"
                 android:importantForAccessibility="no"
                 android:scaleType="centerCrop"
-                app:imageResource="@{Destination.imageResourceId}"
+                app:imageResource="@{Destination.imageName}"
                 tools:src="@drawable/image4" />
 
             <TextView
@@ -43,7 +43,7 @@
                 android:paddingHorizontal="20dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="2dp"
-                android:text="@{Destination.stringResourceId}"
+                android:text="@{Destination.name}"
                 android:textAppearance="?attr/textAppearanceSubtitle2"
                 tools:text="@string/test" />
 
@@ -65,6 +65,7 @@
                 android:paddingTop="3dp"
                 android:paddingBottom="5dp"
                 android:text="@string/test"
+                app:formattedPrice="@{Destination.price}"
                 android:textAppearance="?attr/textAppearanceBody2"
                 tools:text="@string/test" />
 
@@ -75,7 +76,7 @@
                 android:paddingLeft="12dp"
                 android:paddingTop="3dp"
                 android:paddingBottom="5dp"
-                android:text="@{Destination.datesStringResourceId}"
+                android:text="@{Destination.dates}"
                 android:textAppearance="?attr/textAppearanceBody2"
                 tools:text="@string/test" />
 

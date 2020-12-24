@@ -1,12 +1,8 @@
 package com.example.destinations_gallery_single.model
 
-import androidx.annotation.DrawableRes
-import androidx.annotation.IntegerRes
-import androidx.annotation.StringRes
-
 data class Destination(
-    @StringRes val stringResourceId: Int,
-    @DrawableRes val imageResourceId: Int,
-    @IntegerRes val priceIntResourceId: Int,
-    @StringRes val datesStringResourceId: Int
+    val name: String,
+    val imageName: String,
+    val price: Int,
+    val dates: String
 )

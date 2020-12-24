@@ -1,27 +1,6 @@
 <resources>
     <string name="app_name">Destinations</string>
-    <string name="destination1">Yau Tong</string>
-    <string name="destination2">Po Toi Island</string>
-    <string name="destination3">Lamma Island</string>
-    <string name="destination4">Lantau Island</string>
-    <string name="destination5">Discovery Bay</string>
-    <string name="destination6">Cheung Chau Island</string>
-    <string name="destination7">Peng Chau Island</string>
     <string name="test">test</string>
-    <integer name="price1">1263</integer>
-    <integer name="price2">1735</integer>
-    <integer name="price3">1263</integer>
-    <integer name="price4">1735</integer>
-    <integer name="price5">2412</integer>
-    <integer name="price6">1128</integer>
-    <integer name="price7">1625</integer>
-    <string name="dates1">Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM</string>
-    <string name="dates2">Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM</string>
-    <string name="dates3">Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM</string>
-    <string name="dates4">Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM</string>
-    <string name="dates5">Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM</string>
-    <string name="dates6">Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM</string>
-    <string name="dates7">Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="page_heading">Tung Ping Chau</string>

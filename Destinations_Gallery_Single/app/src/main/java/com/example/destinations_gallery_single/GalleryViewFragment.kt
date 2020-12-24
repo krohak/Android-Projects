@@ -24,7 +24,7 @@ class GalleryViewFragment : Fragment() {
             inflater, R.layout.fragment_gallery_view, container, false
         )
 
-        val myDataset = Datasource().loadDestinations()
+        val myDataset = this.context?.let { Datasource(it).loadDestinations() }
         val recyclerView: RecyclerView = binding.recyclerView;
         recyclerView.adapter = this.context?.let { GalleryItemAdapter(it, myDataset) }
         recyclerView.setHasFixedSize(true)
