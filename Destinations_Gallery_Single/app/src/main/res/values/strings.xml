@@ -5,6 +5,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="page_heading">Tung Ping Chau</string>
     <string name="demo_info">This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor.</string>
+    <string name="avatar">🗿</string>
+    <string name="default_table">Table</string>
 </resources>
 
 

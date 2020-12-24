@@ -23,7 +23,8 @@
             android:layout_marginRight="@dimen/marginRight"
             android:textAppearance="?attr/textAppearanceBody1"
             android:textStyle="bold"
-            tools:text="@string/page_heading" />
+            tools:text="@string/default_table"
+            android:text="@string/default_table"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"

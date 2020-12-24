@@ -7,9 +7,9 @@
 
     <data>
 
-<!--        <variable-->
-<!--            name="page"-->
-<!--            type="com.example.destinations_gallery_single.PageFragment" />-->
+        <!--        <variable-->
+        <!--            name="page"-->
+        <!--            type="com.example.destinations_gallery_single.PageFragment" />-->
     </data>
 
     <ScrollView
@@ -25,6 +25,7 @@
 
             <fragment
                 android:id="@+id/CoverPhotosFragment"
+                android:name="com.example.destinations_gallery_single.CoverPhotosFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:layout="@layout/fragment_cover_photos" />
@@ -37,6 +38,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="@dimen/marginRight"
                 android:layout_marginRight="@dimen/marginRight"
+                android:text="@string/page_heading"
                 android:textAppearance="?attr/textAppearanceHeadline5"
                 android:textStyle="bold"
                 tools:text="@string/page_heading" />
@@ -54,14 +56,12 @@
                 android:textAppearance="?attr/textAppearanceBody2" />
 
             <fragment
+                android:id="@+id/GalleryViewFragment"
+                android:name="com.example.destinations_gallery_single.GalleryViewFragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:layout="@layout/fragment_gallery_view" />
 
-
         </LinearLayout>
-
-
     </ScrollView>
-
 </layout>

@@ -3,43 +3,50 @@
     "name": "Yau Tong",
     "imageName": "image1",
     "price": 1128,
-    "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM"
+    "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM",
+    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   },
   {
     "name": "Po Toi Island",
     "imageName": "image2",
     "price": 1263,
-    "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM"
+    "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM",
+    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   },
   {
     "name": "Lamma Island",
     "imageName": "image3",
     "price": 1735,
-    "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM"
+    "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM",
+    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   },
   {
     "name": "Lantau Island",
     "imageName": "image4",
     "price": 1263,
-    "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM"
+    "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM",
+    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   },
   {
     "name": "Discovery Bay",
     "imageName": "image5",
     "price": 1735,
-    "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM"
+    "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM",
+    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   },
   {
     "name": "Cheung Chau Island",
     "imageName": "image6",
     "price": 2412,
-    "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM"
+    "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM",
+    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   },
   {
     "name": "Peng Chau Island",
     "imageName": "image7",
     "price": 1625,
-    "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM"
+    "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM",
+    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   }
 ]
 
