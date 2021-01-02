@@ -5,8 +5,8 @@
     <data>
 
         <variable
-            name="Destination"
-            type="com.example.destinations_gallery_single.model.Destination" />
+            name="page"
+            type="com.example.destinations_gallery_single.model.Page" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -33,7 +33,7 @@
                 android:layout_height="194dp"
                 android:importantForAccessibility="no"
                 android:scaleType="centerCrop"
-                app:imageResource="@{Destination.imageName}"
+                app:imageResource="@{page.coverPhotoName}"
                 tools:src="@drawable/image4" />
 
             <TextView
@@ -43,7 +43,7 @@
                 android:paddingHorizontal="20dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="2dp"
-                android:text="@{Destination.name}"
+                android:text="@{page.name}"
                 android:textAppearance="?attr/textAppearanceSubtitle2"
                 tools:text="@string/test" />
 
@@ -65,7 +65,7 @@
                 android:paddingTop="3dp"
                 android:paddingBottom="5dp"
                 android:text="@string/test"
-                app:formattedPrice="@{Destination.price}"
+                app:formattedPrice="@{page.price}"
                 android:textAppearance="?attr/textAppearanceBody2"
                 tools:text="@string/test" />
 
@@ -76,7 +76,7 @@
                 android:paddingLeft="12dp"
                 android:paddingTop="3dp"
                 android:paddingBottom="5dp"
-                android:text="@{Destination.dates}"
+                android:text="@{page.dates}"
                 android:textAppearance="?attr/textAppearanceBody2"
                 tools:text="@string/test" />
 

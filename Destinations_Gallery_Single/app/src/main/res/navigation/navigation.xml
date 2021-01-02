@@ -3,7 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/pageFragment">
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.destinations_gallery_single.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_pageFragment"
+            app:destination="@id/pageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/pageFragment"
         android:name="com.example.destinations_gallery_single.PageFragment"
@@ -16,5 +25,8 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="page"
+            app:argType="com.example.destinations_gallery_single.model.Page" />
     </fragment>
 </navigation>

@@ -7,9 +7,9 @@
 
     <data>
 
-        <!--        <variable-->
-        <!--            name="page"-->
-        <!--            type="com.example.destinations_gallery_single.PageFragment" />-->
+        <variable
+            name="viewModel"
+            type="com.example.destinations_gallery_single.viewmodels.PageViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -26,9 +26,12 @@
                 android:id="@+id/CoverPhotosFragment"
                 layout="@layout/cover_photos"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                app:coverEmoji="@{viewModel.page.coverEmoji}"
+                app:coverPhotoName="@{viewModel.page.coverPhotoName}" />
 
             <TextView
+                android:id="@+id/pageHeading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/marginLeft"
@@ -36,13 +39,13 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="@dimen/marginRight"
                 android:layout_marginRight="@dimen/marginRight"
-                android:text="@string/page_heading"
+                android:text="@{viewModel.page.name}"
                 android:textAppearance="?attr/textAppearanceHeadline5"
                 android:textStyle="bold"
                 tools:text="@string/page_heading" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/pageDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/marginLeft"
@@ -50,14 +53,16 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="@dimen/marginRight"
                 android:layout_marginRight="@dimen/marginRight"
-                android:text="@string/demo_info"
+                android:text="@{viewModel.page.pageDescription}"
+                tools:text="@string/demo_info"
                 android:textAppearance="?attr/textAppearanceBody2" />
 
             <include
                 android:id="@+id/GalleryViewFragment"
                 layout="@layout/gallery_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                app:tableHeading="@{viewModel.page.tableHeading}"/>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

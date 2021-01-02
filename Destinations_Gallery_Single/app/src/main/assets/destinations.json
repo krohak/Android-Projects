@@ -1,52 +1,59 @@
 [
   {
     "name": "Yau Tong",
-    "imageName": "image1",
+    "coverPhotoName": "image1",
+    "coverEmoji": "\uD83D\uDDFF",
     "price": 1128,
     "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM",
-    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
+    "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   },
   {
     "name": "Po Toi Island",
-    "imageName": "image2",
+    "coverPhotoName": "image2",
+    "coverEmoji": "\uD83D\uDDFF",
     "price": 1263,
     "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM",
-    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
+    "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   },
   {
     "name": "Lamma Island",
-    "imageName": "image3",
+    "coverPhotoName": "image3",
+    "coverEmoji": "\uD83D\uDDFF",
     "price": 1735,
     "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM",
-    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
+    "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   },
   {
     "name": "Lantau Island",
-    "imageName": "image4",
+    "coverPhotoName": "image4",
+    "coverEmoji": "\uD83D\uDDFF",
     "price": 1263,
     "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM",
-    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
+    "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   },
   {
     "name": "Discovery Bay",
-    "imageName": "image5",
+    "coverPhotoName": "image5",
+    "coverEmoji": "\uD83D\uDDFF",
     "price": 1735,
     "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM",
-    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
+    "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   },
   {
     "name": "Cheung Chau Island",
-    "imageName": "image6",
+    "coverPhotoName": "image6",
+    "coverEmoji": "\uD83D\uDDFF",
     "price": 2412,
     "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM",
-    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
+    "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   },
   {
     "name": "Peng Chau Island",
-    "imageName": "image7",
+    "coverPhotoName": "image7",
+    "coverEmoji": "\uD83D\uDDFF",
     "price": 1625,
     "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM",
-    "description": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
+    "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
   }
 ]
 
