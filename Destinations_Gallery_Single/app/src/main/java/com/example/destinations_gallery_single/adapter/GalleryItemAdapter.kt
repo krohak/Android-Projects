@@ -1,7 +1,6 @@
 package com.example.destinations_gallery_single.adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -9,18 +8,18 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.destinations_gallery_single.PageFragmentDirections
-import com.example.destinations_gallery_single.databinding.FragmentGalleryItemBinding
+import com.example.destinations_gallery_single.databinding.GalleryItemBinding
 import com.example.destinations_gallery_single.model.Destination
 
-class GalleryItemAdapter(private val context: Context) : ListAdapter<Destination, RecyclerView.ViewHolder> (PlantDiffCallback()) {
+class GalleryItemAdapter(private val context: Context) : ListAdapter<Destination, RecyclerView.ViewHolder>(PlantDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
 
-        return ItemViewHolder(FragmentGalleryItemBinding.inflate(
+        return ItemViewHolder(GalleryItemBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            )
+        )
         )
     }
 
@@ -30,25 +29,24 @@ class GalleryItemAdapter(private val context: Context) : ListAdapter<Destination
         (holder as ItemViewHolder).bind(destination, context, position)
     }
 
-    class ItemViewHolder(private val galleryItemBinding: FragmentGalleryItemBinding) : RecyclerView.ViewHolder(galleryItemBinding.root) {
+    class ItemViewHolder(private val binding: GalleryItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
         init {
             itemView.setOnClickListener {
-                Log.i("GalleryItemAdapter", "onClickListener")
                 it.findNavController().navigate(PageFragmentDirections.actionPageFragmentSelf())
             }
         }
 
         fun bind(destinationItem: Destination, context: Context, position: Int) {
 
-            galleryItemBinding.apply {
+            binding.apply {
                 destination = destinationItem
                 itemNumber.text = position.toString()
-                galleryItemBinding.itemImage.setImageResource(context.resources.getIdentifier(
+                binding.itemImage.setImageResource(context.resources.getIdentifier(
                         destinationItem.imageName,
                         "drawable",
                         context.packageName
-                    )
+                )
                 )
             }
         }
