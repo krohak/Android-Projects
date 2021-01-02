@@ -25,8 +25,13 @@ class GalleryViewFragment : Fragment() {
         )
 
         val myDataset = this.context?.let { Datasource(it).loadDestinations() }
-        val recyclerView: RecyclerView = binding.recyclerView;
-        recyclerView.adapter = this.context?.let { GalleryItemAdapter(it, myDataset) }
+        val recyclerView: RecyclerView = binding.recyclerView
+
+        val adapter = this.context?.let { GalleryItemAdapter(it) }
+
+        recyclerView.adapter = adapter
+        adapter?.submitList(myDataset)
+
         recyclerView.setHasFixedSize(true)
 
         return binding.root

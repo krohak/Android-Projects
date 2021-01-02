@@ -4,19 +4,33 @@ import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.destinations_gallery_single.PageFragmentDirections
-import com.example.destinations_gallery_single.R
 import com.example.destinations_gallery_single.databinding.FragmentGalleryItemBinding
 import com.example.destinations_gallery_single.model.Destination
 
-class GalleryItemAdapter(private val context: Context, private val dataset: List<Destination>?) :
-    RecyclerView.Adapter<GalleryItemAdapter.ItemViewHolder>() {
+class GalleryItemAdapter(private val context: Context) : ListAdapter<Destination, RecyclerView.ViewHolder> (PlantDiffCallback()) {
 
-    class ItemViewHolder(private val galleryItemBinding: FragmentGalleryItemBinding) :
-        RecyclerView.ViewHolder(galleryItemBinding.root) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
+
+        return ItemViewHolder(FragmentGalleryItemBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+
+        val destination = getItem(position)
+        (holder as ItemViewHolder).bind(destination, context, position)
+    }
+
+    class ItemViewHolder(private val galleryItemBinding: FragmentGalleryItemBinding) : RecyclerView.ViewHolder(galleryItemBinding.root) {
 
         init {
             itemView.setOnClickListener {
@@ -27,35 +41,27 @@ class GalleryItemAdapter(private val context: Context, private val dataset: List
 
         fun bind(destinationItem: Destination, context: Context, position: Int) {
 
-            galleryItemBinding.destination = destinationItem
-
             galleryItemBinding.apply {
+                destination = destinationItem
                 itemNumber.text = position.toString()
-                val resourceId = context.resources.getIdentifier(
-                    destinationItem.imageName, "drawable", context.packageName
-                );
-                galleryItemBinding.itemImage.setImageResource(resourceId)
+                galleryItemBinding.itemImage.setImageResource(context.resources.getIdentifier(
+                        destinationItem.imageName,
+                        "drawable",
+                        context.packageName
+                    )
+                )
             }
         }
     }
+}
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-//        val galleryItemBinding =
-//            FragmentGalleryItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+private class PlantDiffCallback : DiffUtil.ItemCallback<Destination>() {
 
-        val galleryItemBinding = DataBindingUtil.inflate<FragmentGalleryItemBinding>(
-            LayoutInflater.from(parent.context), R.layout.fragment_gallery_item, parent, false
-        )
-
-        return ItemViewHolder(galleryItemBinding)
+    override fun areItemsTheSame(oldItem: Destination, newItem: Destination): Boolean {
+        return oldItem.name == newItem.name
     }
 
-    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val destinationItem = dataset?.get(position)
-        if (destinationItem != null) {
-            holder.bind(destinationItem, context, position)
-        }
+    override fun areContentsTheSame(oldItem: Destination, newItem: Destination): Boolean {
+        return oldItem == newItem
     }
-
-    override fun getItemCount(): Int = dataset?.size ?: 0
 }
