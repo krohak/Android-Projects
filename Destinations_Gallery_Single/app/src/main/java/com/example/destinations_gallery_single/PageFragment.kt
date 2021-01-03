@@ -7,24 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.navArgs
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.destinations_gallery_single.adapter.GalleryItemAdapter
 import com.example.destinations_gallery_single.databinding.FragmentPageBinding
 import com.example.destinations_gallery_single.viewmodels.PageViewModel
+import com.example.destinations_gallery_single.viewmodels.PageViewModelFactory
 
 class PageFragment : Fragment() {
 
-    private val args: PageFragmentArgs by navArgs()
-
-    lateinit var pageViewModelFactory: PageViewModel.AssistedFactory
-    private val viewModel: PageViewModel by viewModels {
-        PageViewModel.provideFactory(
-            pageViewModelFactory,
-            args.page
-        )
-    }
+    private lateinit var pageViewModelFactory : PageViewModelFactory
+    private lateinit var pageViewModel: PageViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,13 +25,18 @@ class PageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        val page = PageFragmentArgs.fromBundle(requireArguments()).page
+        pageViewModelFactory = PageViewModelFactory(page)
+        pageViewModel = ViewModelProvider(this, pageViewModelFactory)
+            .get(PageViewModel::class.java)
+
         val binding = DataBindingUtil.inflate<FragmentPageBinding>(
             inflater,
             R.layout.fragment_page,
             container,
             false
         ).apply {
-            viewModel = viewModel
+            viewModel = pageViewModel
             lifecycleOwner = viewLifecycleOwner
         }
 
@@ -58,7 +56,7 @@ class PageFragment : Fragment() {
 
 
     private fun subscribeUi(adapter: GalleryItemAdapter) {
-        viewModel.galleryDataset.observe(viewLifecycleOwner) { galleryDataset ->
+        pageViewModel.galleryDataset.observe(viewLifecycleOwner) { galleryDataset ->
             adapter.submitList(galleryDataset)
         }
     }

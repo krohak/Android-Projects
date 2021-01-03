@@ -1,5 +1,6 @@
 package com.example.destinations_gallery_single.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,20 +14,17 @@ class PageViewModel( val page: Page): ViewModel() {
     val galleryDataset: LiveData<List<Page>>
         get() = _galleryDataset
 
-    interface AssistedFactory {
-        fun create(page: Page): PageViewModel
-    }
+}
 
-    companion object {
-        fun provideFactory(
-                assistedFactory: AssistedFactory,
-                page: Page
-        ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
-            @Suppress("UNCHECKED_CAST")
-            override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-                return assistedFactory.create(page) as T
-            }
+class PageViewModelFactory(private val page: Page) : ViewModelProvider.Factory  {
+
+    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+
+        Log.i("ScoreViewModelFactory", "create")
+        if (modelClass.isAssignableFrom(PageViewModel::class.java)) {
+            return PageViewModel(page) as T
         }
-    }
+        throw IllegalArgumentException("Unknown ViewModel class")
 
+    }
 }

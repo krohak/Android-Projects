@@ -2,7 +2,7 @@
   {
     "name": "Yau Tong",
     "coverPhotoName": "image1",
-    "coverEmoji": "\uD83D\uDDFF",
+    "coverEmoji": "\uD83D\uDEA2",
     "price": 1128,
     "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM",
     "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
@@ -10,7 +10,7 @@
   {
     "name": "Po Toi Island",
     "coverPhotoName": "image2",
-    "coverEmoji": "\uD83D\uDDFF",
+    "coverEmoji": "\uD83C\uDFD4️",
     "price": 1263,
     "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM",
     "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
@@ -18,7 +18,7 @@
   {
     "name": "Lamma Island",
     "coverPhotoName": "image3",
-    "coverEmoji": "\uD83D\uDDFF",
+    "coverEmoji": "\uD83C\uDF0A",
     "price": 1735,
     "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM",
     "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
@@ -26,7 +26,7 @@
   {
     "name": "Lantau Island",
     "coverPhotoName": "image4",
-    "coverEmoji": "\uD83D\uDDFF",
+    "coverEmoji": "\uD83C\uDF87",
     "price": 1263,
     "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM",
     "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
@@ -34,7 +34,7 @@
   {
     "name": "Discovery Bay",
     "coverPhotoName": "image5",
-    "coverEmoji": "\uD83D\uDDFF",
+    "coverEmoji": "\uD83C\uDF04",
     "price": 1735,
     "dates": "Dec 20, 2020 12:00 PM → Dec 22, 2020 12:00 PM",
     "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
@@ -42,7 +42,7 @@
   {
     "name": "Cheung Chau Island",
     "coverPhotoName": "image6",
-    "coverEmoji": "\uD83D\uDDFF",
+    "coverEmoji": "☮️",
     "price": 2412,
     "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM",
     "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."
@@ -50,7 +50,7 @@
   {
     "name": "Peng Chau Island",
     "coverPhotoName": "image7",
-    "coverEmoji": "\uD83D\uDDFF",
+    "coverEmoji": "\uD83D\uDC7B",
     "price": 1625,
     "dates": "Dec 18, 2020 12:00 PM → Dec 20, 2020 12:00 PM",
     "pageDescription": "This page provides a guide to building a layout with ConstraintLayout in Android Studio 3.0 or higher. If you\\'d like more information about the Layout Editor itself, see the Android Studio guide to Build a UI with Layout Editor."

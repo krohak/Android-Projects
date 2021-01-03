@@ -1,12 +1,13 @@
 package com.example.destinations_gallery_single
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import com.example.destinations_gallery_single.data.Datasource
 import com.example.destinations_gallery_single.databinding.FragmentHomeBinding
 import com.example.destinations_gallery_single.model.Page
@@ -18,7 +19,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
 
         val myDataset = this.context?.let { Datasource(it).loadPages() }
 
@@ -37,9 +37,15 @@ class HomeFragment : Fragment() {
                 )
             }
 
-        homePage?.let {
-            this.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPageFragment(it))
-        }
+
+            Log.i("HomeFragment",homePage.toString())
+
+
+            if (homePage != null) {
+                val action = HomeFragmentDirections.actionHomeFragmentToPageFragment(homePage)
+                NavHostFragment.findNavController(this).navigate(action)
+            }
+
 
          return DataBindingUtil.inflate<FragmentHomeBinding>(
             inflater,
