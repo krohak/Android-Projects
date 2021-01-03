@@ -18,13 +18,12 @@ class MainActivity : AppCompatActivity() {
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         val navController = this.findNavController(R.id.myNavHostFragment)
 
-        val mActionBarToolbar: MaterialToolbar = binding.myToolbar;
-        setSupportActionBar(mActionBarToolbar);
+        val mActionBarToolbar: MaterialToolbar = binding.myToolbar
+        setSupportActionBar(mActionBarToolbar)
 
         NavigationUI.setupActionBarWithNavController(this, navController)
         NavigationUI.setupWithNavController(binding.navView, navController)
 
-        supportActionBar?.title = this.resources.getString(R.string.app_name);
-
+        supportActionBar?.title = this.resources.getString(R.string.app_name)
     }
 }

@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="page"
             type="com.example.destinations_gallery_single.model.Page" />
@@ -40,10 +39,10 @@
                 android:id="@+id/item_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="20dp"
+                android:paddingHorizontal="10dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="2dp"
-                android:text="@{page.name}"
+                android:text="@{@string/space_format(page.coverEmoji, page.name)}"
                 android:textAppearance="?attr/textAppearanceSubtitle2"
                 tools:text="@string/test" />
 
@@ -65,8 +64,8 @@
                 android:paddingTop="3dp"
                 android:paddingBottom="5dp"
                 android:text="@string/test"
-                app:formattedPrice="@{page.price}"
                 android:textAppearance="?attr/textAppearanceBody2"
+                app:formattedPrice="@{page.price}"
                 tools:text="@string/test" />
 
             <TextView

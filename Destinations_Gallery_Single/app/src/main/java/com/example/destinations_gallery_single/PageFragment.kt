@@ -16,28 +16,35 @@ import com.example.destinations_gallery_single.viewmodels.PageViewModelFactory
 
 class PageFragment : Fragment() {
 
-    private lateinit var pageViewModelFactory : PageViewModelFactory
+    private lateinit var pageViewModelFactory: PageViewModelFactory
     private lateinit var pageViewModel: PageViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
 
         val page = PageFragmentArgs.fromBundle(requireArguments()).page
         pageViewModelFactory = PageViewModelFactory(page)
         pageViewModel = ViewModelProvider(this, pageViewModelFactory)
-            .get(PageViewModel::class.java)
+                .get(PageViewModel::class.java)
 
         val binding = DataBindingUtil.inflate<FragmentPageBinding>(
-            inflater,
-            R.layout.fragment_page,
-            container,
-            false
+                inflater, R.layout.fragment_page,
+                container, false
         ).apply {
             viewModel = pageViewModel
             lifecycleOwner = viewLifecycleOwner
+        }
+
+        this.context?.let {
+            binding.coverPhotos.coverPhoto.setImageResource(it.resources.getIdentifier(
+                    page.coverPhotoName,
+                    "drawable",
+                    it.packageName
+                )
+            )
         }
 
 
@@ -45,8 +52,10 @@ class PageFragment : Fragment() {
 
         val adapter = this.context?.let { GalleryItemAdapter(it) }
 
-        recyclerView.adapter = adapter
-        adapter?.let { subscribeUi(it) }
+        adapter?.let {
+            recyclerView.adapter = it
+            subscribeUi(it)
+        }
 
         recyclerView.setHasFixedSize(true)
 

@@ -20,7 +20,7 @@ class GalleryItemAdapter(private val context: Context) : ListAdapter<Page, Recyc
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-        )
+            )
         )
     }
 
@@ -41,8 +41,8 @@ class GalleryItemAdapter(private val context: Context) : ListAdapter<Page, Recyc
         }
 
         private fun navigateToPage(
-            page: Page,
-            view: View
+                page: Page,
+                view: View
         ) {
             val direction = PageFragmentDirections.actionPageFragmentSelf(page)
             view.findNavController().navigate(direction)
@@ -54,7 +54,7 @@ class GalleryItemAdapter(private val context: Context) : ListAdapter<Page, Recyc
                 page = pageItem
                 itemNumber.text = position.toString()
                 itemImage.setImageResource(context.resources.getIdentifier(
-                    pageItem.coverPhotoName,
+                        pageItem.coverPhotoName,
                         "drawable",
                         context.packageName
                 )
