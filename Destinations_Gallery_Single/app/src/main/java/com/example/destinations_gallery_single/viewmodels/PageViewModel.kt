@@ -10,7 +10,7 @@ import com.example.destinations_gallery_single.model.Page
 class PageViewModel(val page: Page) : ViewModel() {
 
     private val _galleryDataset = MutableLiveData(page.tableData)
-    val galleryDataset: LiveData<List<Page>>
+    val galleryDataset: LiveData<List<Page>?>
         get() = _galleryDataset
 
 }

@@ -11,6 +11,6 @@ data class Page(
         val price: Int,
         val dates: String,
         val pageDescription: String,
-        val tableHeading: String,
-        val tableData: List<Page>
+        val tableHeading: String?,
+        val tableData: List<Page>?
 ) : Parcelable
