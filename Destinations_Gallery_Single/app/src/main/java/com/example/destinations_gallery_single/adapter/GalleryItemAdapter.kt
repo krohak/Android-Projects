@@ -1,6 +1,7 @@
 package com.example.destinations_gallery_single.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,6 +45,7 @@ class GalleryItemAdapter(private val context: Context) : ListAdapter<Page, Recyc
                 page: Page,
                 view: View
         ) {
+            Log.i("navigateToPage", page.Id.toString())
             val direction = PageFragmentDirections.actionPageFragmentSelf(page)
             view.findNavController().navigate(direction)
         }

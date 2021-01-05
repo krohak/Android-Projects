@@ -20,43 +20,39 @@ class PageFragment : Fragment() {
     private lateinit var pageViewModel: PageViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? {
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
 
         val page = PageFragmentArgs.fromBundle(requireArguments()).page
         pageViewModelFactory = PageViewModelFactory(page)
         pageViewModel = ViewModelProvider(this, pageViewModelFactory)
-                .get(PageViewModel::class.java)
+            .get(PageViewModel::class.java)
 
         val binding = DataBindingUtil.inflate<FragmentPageBinding>(
-                inflater, R.layout.fragment_page,
-                container, false
+            inflater, R.layout.fragment_page,
+            container, false
         ).apply {
             viewModel = pageViewModel
             lifecycleOwner = viewLifecycleOwner
         }
 
-        this.context?.let {
-            binding.coverPhotos.coverPhoto.setImageResource(it.resources.getIdentifier(
-                    page.coverPhotoName,
-                    "drawable",
-                    it.packageName
-                )
+        val context = requireContext()
+
+        binding.coverPhotos.coverPhoto.setImageResource(
+            context.resources.getIdentifier(
+                page.coverPhotoName,
+                "drawable",
+                context.packageName
             )
-        }
+        )
 
 
         val recyclerView: RecyclerView = binding.GalleryViewFragment.recyclerView
-
-        val adapter = this.context?.let { GalleryItemAdapter(it) }
-
-        adapter?.let {
-            recyclerView.adapter = it
-            subscribeUi(it)
-        }
-
+        val adapter = GalleryItemAdapter(context)
+        recyclerView.adapter = adapter
+        subscribeUi(adapter)
         recyclerView.setHasFixedSize(true)
 
         return binding.root
