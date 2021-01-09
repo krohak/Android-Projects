@@ -19,7 +19,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(
+            this, R.layout.activity_main
+        )
         val navController = this.findNavController(R.id.myNavHostFragment)
 
         val mActionBarToolbar: MaterialToolbar = binding.myToolbar
@@ -28,14 +30,15 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController)
         NavigationUI.setupWithNavController(binding.navView, navController)
 
-        supportActionBar?.title = this.resources.getString(R.string.app_name)
-
         val myDataset = Datasource(application).loadPages()
         val pageDatabase = PageDatabase.getInstance(application)
 
-        lifecycleScope.launch{
+        lifecycleScope.launch {
             pageDatabase.pageDatabaseDao.insertAll(myDataset)
         }
+    }
 
+    fun setActionBarTitle(title: String?) {
+        supportActionBar?.title = title
     }
 }

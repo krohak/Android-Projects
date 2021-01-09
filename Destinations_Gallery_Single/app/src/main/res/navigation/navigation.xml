@@ -7,7 +7,6 @@
     <fragment
         android:id="@+id/pageFragment"
         android:name="com.example.destinations_gallery_single.PageFragment"
-        android:label="fragment_page"
         tools:layout="@layout/fragment_page">
         <action
             android:id="@+id/action_pageFragment_self"

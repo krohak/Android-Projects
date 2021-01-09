@@ -54,6 +54,10 @@ class PageFragment : Fragment() {
         pageViewModel.galleryDataset.observe(viewLifecycleOwner) { galleryDataset ->
             adapter.submitList(galleryDataset)
         }
+
+        pageViewModel.page.observe(viewLifecycleOwner,{
+            (activity as MainActivity).setActionBarTitle(it.name)
+        })
     }
 
 
