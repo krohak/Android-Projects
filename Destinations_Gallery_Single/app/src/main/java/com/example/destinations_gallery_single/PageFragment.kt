@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.RecyclerView
 import com.example.destinations_gallery_single.adapter.GalleryItemAdapter
+import com.example.destinations_gallery_single.data.PageDatabase
 import com.example.destinations_gallery_single.databinding.FragmentPageBinding
 import com.example.destinations_gallery_single.viewmodels.PageViewModel
 import com.example.destinations_gallery_single.viewmodels.PageViewModelFactory
@@ -25,8 +25,11 @@ class PageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val page = PageFragmentArgs.fromBundle(requireArguments()).page
-        pageViewModelFactory = PageViewModelFactory(page)
+        val pageId: Long = PageFragmentArgs.fromBundle(requireArguments()).pageId
+        val application = requireActivity().application
+        val database = PageDatabase.getInstance(application).pageDatabaseDao
+
+        pageViewModelFactory = PageViewModelFactory(pageId, database, application)
         pageViewModel = ViewModelProvider(this, pageViewModelFactory)
             .get(PageViewModel::class.java)
 
@@ -38,25 +41,12 @@ class PageFragment : Fragment() {
             lifecycleOwner = viewLifecycleOwner
         }
 
-        val context = requireContext()
-
-        binding.coverPhotos.coverPhoto.setImageResource(
-            context.resources.getIdentifier(
-                page.coverPhotoName,
-                "drawable",
-                context.packageName
-            )
-        )
-
-
-        val recyclerView: RecyclerView = binding.GalleryViewFragment.recyclerView
-        val adapter = GalleryItemAdapter(context)
+        val recyclerView = binding.GalleryViewFragment.recyclerView
+        val adapter = GalleryItemAdapter(requireContext())
         recyclerView.adapter = adapter
         subscribeUi(adapter)
-        recyclerView.setHasFixedSize(true)
 
         return binding.root
-
     }
 
 

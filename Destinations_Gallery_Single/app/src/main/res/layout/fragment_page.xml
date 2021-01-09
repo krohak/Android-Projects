@@ -27,7 +27,8 @@
                 layout="@layout/cover_photos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:coverEmoji="@{viewModel.page.coverEmoji}" />
+                app:coverEmoji="@{viewModel.page.coverEmoji}"
+                app:coverPhotoName="@{viewModel.page.coverPhotoName}"/>
 
             <TextView
                 android:id="@+id/pageHeading"

@@ -8,6 +8,9 @@
         <variable
             name="coverEmoji"
             type="String" />
+        <variable
+            name="coverPhotoName"
+            type="String" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +26,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/cover" />
+            tools:src="@drawable/cover"
+            app:imageResource="@{coverPhotoName}"/>
 
         <TextView
             android:id="@+id/cover_emoji"

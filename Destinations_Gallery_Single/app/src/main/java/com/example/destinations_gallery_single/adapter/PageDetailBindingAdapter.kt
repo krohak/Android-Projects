@@ -5,9 +5,14 @@ import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import java.text.NumberFormat
 
+
 @BindingAdapter("imageResource")
-fun setImageResource(imageView: ImageView, imageName: String) {
-//    imageView.setImageResource(imageName)
+fun setImageResource(imageView: ImageView, imageName: String?) {
+    if (!imageName.isNullOrEmpty()) {
+        val context = imageView.context
+        val resource = context.resources.getIdentifier(imageName, "drawable", context.packageName)
+        imageView.setImageResource(resource)
+    }
 }
 
 @BindingAdapter("formattedPrice")
